@@ -8,10 +8,12 @@
     --text-color: #c5cfe8;
     --text-color-hover: #6989e0;
 
+    font-family: 'Montserrat', Arial;
+}
+
+body {
     background-color: var(--bg);
     color: var(--text-color);
-
-    font-family: 'Montserrat', Arial;
 }
 
 header {
@@ -49,4 +51,47 @@ header {
     color: var(--text-color-hover);
     cursor: pointer;
     border-color: var(--text-color-hover);
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    width: 2rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: 0.4s ease;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+    display: block;
+    content: '';
+    background-color: var(--text-color);
+    height: .25rem;
+    margin: .5rem 0;
+    transition: 0.4s ease;
+}
+
+.hamburger:hover::before {
+    /* transform: rotate(-45deg) translate(-1rem, 0); */
+    animation: rotate-before 1s forwards;
+    background-color: var(--text-color-hover);
+}
+
+.hamburger:hover::after {
+    /* transform: rotate(45deg) translate(-1rem, 0); */
+    animation: rotate-after 1s forwards;
+    background-color: var(--text-color-hover);
+}
+
+.hamburger:hover > .bar  {
+    background-color: transparent;
+}
+
+@keyframes rotate-before {
+    to { transform: rotate(-45deg) translate(-1rem, 0); }
+}
+
+@keyframes rotate-after {
+    to { transform: rotate(45deg) translate(-1rem, 0); }
 }

@@ -21,6 +21,9 @@ export const Nav = () => {
           </li>
         </ul>
       </nav>
+      <button className="hamburger">
+        <div className="bar"></div>
+      </button>
     </header>
   );
 };
