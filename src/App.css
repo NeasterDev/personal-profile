@@ -91,14 +91,39 @@ nav {
     background-color: transparent;
 }
 
-/* small screens */
+/* medium screens */
 @media screen and (max-width: 1200px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        flex-direction: row-reverse;
+    }
+
+    .nav-links {
+        width: 0;
+        overflow: hidden;
+        transition: 0.75s ease;
+    }
+
+    .hamburger:hover ~ .nav-links, .nav-links:hover {
+        width: 100%;
+    }
+}
+
+/* small screens */
+@media screen and (max-width: 768px) {
     .hamburger {
         display: block;
     }
 
     header {
         align-items: flex-start;
+    }
+
+    header #nav-logo {
+        padding-top: 0.5rem;
     }
 
     nav {
@@ -115,10 +140,12 @@ nav {
         margin: 0;
         padding: 0;
 
+        font-size: 1.5rem;
+
         flex-direction: column;
     }
 
     .hamburger:hover ~ .nav-links, .nav-links:hover {
-        height: 7rem;
+        height: 9rem;
     }
 }
