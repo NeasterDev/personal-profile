@@ -3,6 +3,9 @@ export const Nav = () => {
     <header>
       <div id="nav-logo">NICHOLAS EASTER</div>
       <nav>
+        <button className="hamburger">
+          <div className="bar"></div>
+        </button>
         <ul className="nav-links">
           <li>
             <a>
@@ -21,9 +24,6 @@ export const Nav = () => {
           </li>
         </ul>
       </nav>
-      <button className="hamburger">
-        <div className="bar"></div>
-      </button>
     </header>
   );
 };

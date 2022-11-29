@@ -22,6 +22,10 @@ header {
     align-items: center;
 }
 
+nav {
+    display: flex;
+}
+
 #nav-logo {
     margin-left: 1rem;
     transition: 0.4s ease;
@@ -54,13 +58,14 @@ header {
 }
 
 .hamburger {
-    display: block;
-    position: relative;
+    display: none;
     width: 2rem;
     cursor: pointer;
     background-color: transparent;
     border: none;
     transition: 0.4s ease;
+
+    z-index: 100;
 }
 
 .hamburger .bar, .hamburger:after, .hamburger:before {
@@ -69,18 +74,16 @@ header {
     background-color: var(--text-color);
     height: .25rem;
     margin: .5rem 0;
-    transition: 0.4s ease;
+    transition: 0.4s ease-in-out;
 }
 
 .hamburger:hover::before {
-    /* transform: rotate(-45deg) translate(-1rem, 0); */
-    animation: rotate-before 1s forwards;
+    transform: rotate(-45deg) translate(-1rem, 0);
     background-color: var(--text-color-hover);
 }
 
 .hamburger:hover::after {
-    /* transform: rotate(45deg) translate(-1rem, 0); */
-    animation: rotate-after 1s forwards;
+    transform: rotate(45deg) translate(-1rem, 0);
     background-color: var(--text-color-hover);
 }
 
@@ -88,10 +91,34 @@ header {
     background-color: transparent;
 }
 
-@keyframes rotate-before {
-    to { transform: rotate(-45deg) translate(-1rem, 0); }
-}
+/* small screens */
+@media screen and (max-width: 1200px) {
+    .hamburger {
+        display: block;
+    }
 
-@keyframes rotate-after {
-    to { transform: rotate(45deg) translate(-1rem, 0); }
+    header {
+        align-items: flex-start;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .nav-links {
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s ease;
+
+        margin: 0;
+        padding: 0;
+
+        flex-direction: column;
+    }
+
+    .hamburger:hover ~ .nav-links, .nav-links:hover {
+        height: 7rem;
+    }
 }
