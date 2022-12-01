@@ -68,7 +68,7 @@ nav {
     z-index: 100;
 }
 
-.hamburger .bar, .hamburger:after, .hamburger:before {
+.hamburger .bar, .hamburger::after, .hamburger::before {
     display: block;
     content: '';
     background-color: var(--text-color);
@@ -148,4 +148,30 @@ nav {
     .hamburger:hover ~ .nav-links, .nav-links:hover {
         height: 9rem;
     }
+}
+/* nav done */
+
+/* about me */
+.about-me-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+}
+
+/* small screens */
+@media screen and (max-width: 768px) {
+    .about-me-container {
+        flex-direction: column;
+    }
+}
+
+.img-container, .about-description {
+    border: 1px solid var(--text-color)
+}
+
+.img-container {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
 }
