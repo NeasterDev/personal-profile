@@ -167,11 +167,17 @@ nav {
 }
 
 .img-container, .about-description {
-    border: 1px solid var(--text-color)
+    /* border: 1px solid var(--text-color); */
+    flex: 6;
+    margin: 0 1rem;
 }
 
 .img-container {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#selfie {
+    border-radius:50%;
+    max-height: 33.3vh
 }
