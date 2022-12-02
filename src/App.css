@@ -20,6 +20,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0.5rem;
 }
 
 nav {
@@ -156,7 +157,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 50vh;
+    /* height: 50vh; */
 }
 
 /* small screens */
@@ -167,9 +168,18 @@ nav {
 }
 
 .img-container, .about-description {
-    /* border: 1px solid var(--text-color); */
     flex: 6;
     margin: 0 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+    .img-container {
+        flex: 3;
+    }
+
+    .about-description {
+        flex: 9;
+    }
 }
 
 .img-container {

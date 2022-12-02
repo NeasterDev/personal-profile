@@ -15,7 +15,7 @@ export class AboutMe extends React.Component {
                 <div className="img-container">
                     <img id="selfie" src={selfie} />
                 </div>
-                <div className="about-description">{this.filler}</div>
+                <div className="about-description">{this.filler + this.filler + this.filler}</div>
             </section>
         )
     }
