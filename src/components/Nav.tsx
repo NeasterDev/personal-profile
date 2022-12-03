@@ -1,4 +1,12 @@
+import { BaseSyntheticEvent, ChangeEvent, MouseEvent  } from "react";
+
 export const Nav = () => {
+
+  // const onHamburgerClick = (e: MouseEvent<HTMLButtonElement>): void => {
+  //   const target = e.target as HTMLButtonElement;
+  //   target.classList.toggle("active");
+  // }
+
   return (
     <header>
       <div id="nav-logo">NICHOLAS EASTER</div>
