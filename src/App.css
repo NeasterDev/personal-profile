@@ -20,6 +20,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0.5rem;
 }
 
 nav {
@@ -68,7 +69,7 @@ nav {
     z-index: 100;
 }
 
-.hamburger .bar, .hamburger:after, .hamburger:before {
+.hamburger .bar, .hamburger::after, .hamburger::before {
     display: block;
     content: '';
     background-color: var(--text-color);
@@ -148,4 +149,45 @@ nav {
     .hamburger:hover ~ .nav-links, .nav-links:hover {
         height: 9rem;
     }
+}
+/* nav done */
+
+/* about me */
+.about-me-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* height: 50vh; */
+}
+
+/* small screens */
+@media screen and (max-width: 768px) {
+    .about-me-container {
+        flex-direction: column;
+    }
+}
+
+.img-container, .about-description {
+    flex: 6;
+    margin: 0 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+    .img-container {
+        flex: 3;
+    }
+
+    .about-description {
+        flex: 9;
+    }
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+
+#selfie {
+    border-radius:50%;
+    max-height: 33.3vh
 }

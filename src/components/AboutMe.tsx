@@ -1,19 +1,21 @@
 import React from "react";
+import selfie from "../assets/profile_pic.png";
 
 export class AboutMe extends React.Component {
-    constructor(props: any){
+    constructor(props: {}) {
         super(props);
-        this.state = {
-
-        }
+        this.state = {};
     }
-
+    
+    filler = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam provident suscipit culpa earum delectus maxime deleniti consequuntur laudantium neque voluptates in, labore nemo, ratione ex eum, fugit quisquam dolor ducimus?";
 
     render() {
         return (
-            <section className="about-me">
-                <div className="selfie"></div>
-                <section id="about-me-description"></section>
+            <section className="about-me-container">
+                <div className="img-container">
+                    <img id="selfie" src={selfie} />
+                </div>
+                <div className="about-description">{this.filler + this.filler + this.filler}</div>
             </section>
         )
     }
