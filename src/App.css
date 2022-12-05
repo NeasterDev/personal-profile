@@ -5,6 +5,9 @@
     padding: 0;
     font-size: 16px;
     --bg: #423d3c;
+    --bg-25: hsl(10, 5%, 25%, 25%);
+    --bg-50: hsl(10, 5%, 25%, 50%);
+    --bg-75: hsl(10, 5%, 25%, 75%);
     --text-color: #c5cfe8;
     --text-color-hover: #6989e0;
 
@@ -21,6 +24,26 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 0.5rem;
+
+    /* sticky nav stretched  */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background-color: var(--bg-50);
+    transition: background-color 0.4s;
+}
+
+header:hover {
+    background-color: var(--bg);
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        background-color: var(--bg-75);
+    }
+
 }
 
 nav {
@@ -157,13 +180,14 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* height: 50vh; */
+    min-height: 100vh;
 }
 
 /* small screens */
 @media screen and (max-width: 768px) {
     .about-me-container {
         flex-direction: column;
+        margin-top: 3rem;
     }
 }
 
@@ -172,7 +196,19 @@ nav {
     margin: 0 1rem;
 }
 
+/* if screen is bigger than 1200px */
 @media screen and (min-width: 1200px) {
+    .img-container {
+        flex: 3;
+    }
+
+    .about-description {
+        flex: 9;
+    }
+}
+
+/* small screen */
+@media screen and (max-width: 768px) {
     .img-container {
         flex: 3;
     }
@@ -190,4 +226,43 @@ nav {
 #selfie {
     border-radius:50%;
     max-height: 33.3vh
+}
+
+/* projects section */
+#projects-container {
+    border: 5px solid blue;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-card-container *  {
+    flex: 6;
+    min-height: 100vh;
+}
+
+.project-card-image {
+    background-color: plum;
+}
+
+.project-card-desc {
+    background-color: #6989e0;
+}
+
+/* small screen */
+@media screen and (max-width: 768px) {
+    .project-card-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-card-container *  {
+        min-height: 50vh;
+    }
+
 }
