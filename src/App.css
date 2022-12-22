@@ -4,7 +4,10 @@
     margin: 0;
     padding: 0;
     font-size: 16px;
-    --bg: #423d3c;
+    --bg: hsl(10, 5%, 25%);
+    --bg-opaque: hsl(10, 5%, 25%, 50%);
+    --bg-light: #6e6564;
+    --bg-dark: #2d2929;
     --text-color: #c5cfe8;
     --text-color-hover: #6989e0;
 
@@ -20,7 +23,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.5rem;
+
+    /* fixed to the top, stretches it across the page*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-opaque);
 }
 
 nav {
@@ -158,6 +167,13 @@ nav {
     justify-content: space-around;
     align-items: center;
     /* height: 50vh; */
+    background-color: var(--bg-light);
+
+    min-height: 100vh;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+
+    font-size: 1.25rem;
 }
 
 /* small screens */

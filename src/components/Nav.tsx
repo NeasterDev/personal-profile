@@ -9,7 +9,7 @@ export const Nav = () => {
 
   return (
     <header>
-      <div id="nav-logo">NICHOLAS EASTER</div>
+      <div id="nav-logo">Nicolas Easter</div>
       <nav>
         <button className="hamburger">
           <div className="bar"></div>
