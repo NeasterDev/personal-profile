@@ -36,12 +36,12 @@ header {
 }
 
 header:hover {
-    background-color: var(--bg);
+    /* background-color: var(--bg); */
 }
 
 @media screen and (max-width: 768px) {
     header {
-        background-color: var(--bg-75);
+        /* background-color: var(--bg-75); */
     }
 
 }
@@ -221,6 +221,7 @@ nav {
 .img-container {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #selfie {
@@ -266,3 +267,33 @@ nav {
     }
 
 }
+
+.typewriter {
+    max-width: fit-content;
+    margin: 0 0 1rem 1rem;
+}
+
+.typewriter h1 {
+    overflow: hidden;
+    border-right: 0.15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    animation: 
+        typing 2s steps(30, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+/* about me end */
